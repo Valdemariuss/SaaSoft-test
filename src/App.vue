@@ -5,12 +5,10 @@
     
     main.app-main
       AccountForm
-      AccountsList
 </template>
 
 <script lang="ts" setup>
 import AccountForm from '@/components/AccountForm.vue';
-import AccountsList from '@/components/AccountsList.vue';
 </script>
 
 <style lang="scss">

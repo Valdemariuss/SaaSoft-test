@@ -1,8 +1,8 @@
 export interface IAccount {
-    label?: string[];
+    label: { text: string }[];
     type: 'ldap' | 'local';
     login: string;
-    password?: string;
+    password: string | null;
   }
 
   export enum AccountTypes {
