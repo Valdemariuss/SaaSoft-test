@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+      /* Базовые опции */
+      "target": "esnext",                      // Целевая версия JavaScript
+      "module": "esnext",                      // Модульная система (ES modules)
+      "strict": true,                          // Включить строгий режим TypeScript
+      "allowJs": false,                        // Не разрешать файлы JavaScript
+      "checkJs": false,                        // Не проверять файлы JavaScript
+      "noEmitOnError": true,                   // Не собирать, если есть ошибки
+      "resolveJsonModule": true,               // Включить импорт JSON-модулей
+      "skipLibCheck": true,                    // Пропустить проверку стандартных библиотек
+      "forceConsistentCasingInFileNames": true,// Проверять регистронезависимые имена файлов
+      
+      /* Оптимизация сборки */
+      "incremental": true,                     // Включить инкрементальную сборку
+      "moduleResolution": "node",              // Решатель модулей node.js
+      "outDir": "./dist",                      // Директория выходного JavaScript
+      "rootDir": "./src",                      // Основная папка исходников
+      "sourceMap": true,                       // Генерировать source maps
+      "declaration": false,                    // Не генерировать декларации типов
+      "emitDeclarationOnly": false,            // Не генерировать только декларации
+      
+      /* Специфичные для Vue опции */
+      "plugins": [{                            // Vue-specific plugin
+        "transform": "vue-sfc-transform"
+      }],
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]                       // Alias для абсолютных путей
+      },
+      "lib": ["dom", "dom.iterable", "esnext"],// Используйте библиотеки DOM и ESNext
+      "types": ["vite/client"]                 // Типы для Vite
+    },
+    "include": ["src/**/*.{ts,tsx,vue,jsx}", "src/*.{ts,tsx,vue,jsx}"],
+    "exclude": ["node_modules"]
+  }
